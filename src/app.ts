@@ -1,14 +1,9 @@
 // src/app.ts
-
+// Lancement du serveur
 import { envs } from './core/config/env';
 import app from './server';
 
-app.get('/', (_req, res) => {
-	res.send({
-		message: `Test done well !`
-	});
-});
-
 app.listen(envs.PORT, () => {
 	console.log(`Server running on port http://localhost:${envs.PORT}/`);
+	console.log(`Documentation  : http://localhost:${envs.PORT}/api-docs`);
 });
