@@ -4,7 +4,6 @@ import express from 'express';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import { setupSwagger } from './swagger';
-import router from './routes/test.routes';
 import morgan from 'morgan';
 import { ONE_HUNDRED, SIXTY } from './core/constants';
 
@@ -21,7 +20,6 @@ app.use(
 );
 
 app.use(morgan('combined'));
-app.use(router);
 
 setupSwagger(app);
 export default app;
